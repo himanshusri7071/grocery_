@@ -1,0 +1,20 @@
+[
+  { "product_name": "olddrinks",
+
+  "category": "snack and beverage",
+  "price": 78,
+  "desc": "desc",
+    "made_in": "India",
+    "image": "cp5.jpg",
+    "image_1": "cp5.jpg",
+    "image_2":"cp5.jpg"
+  }, { "product_name": "bookbook",
+  "category": "Personal Care",
+  "price": 78,
+  "desc": "desc",
+    "made_in": "India",
+    "image": "shop/images/cp5.jpg",
+    "image_1":"shop/images/cp5.jpg",
+    "image_2":"cp5.jpg"
+  }
+]

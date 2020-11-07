@@ -1,0 +1,109 @@
+{% extends 'shop/basic.html' %}
+
+{% block title%} Contact Us - My Awesome Cart{% endblock %}
+{% block body %}
+
+
+
+
+<body>
+
+
+ <!-- Start All Title Box -->
+    <div class="all-title-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>CONTACT-US</h2>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End All Title Box -->
+    <!-- Start Contact Us  -->
+    <div class="contact-box-main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-12">
+                    <div class="contact-info-left">
+                        <h2>CONTACT INFO</h2>
+                        <p>FREE FEEL TO CONTACT US..</p>
+                        <ul>
+                            <li>
+                                <p><i class="fas fa-map-marker-alt"></i>Address: onlinebazar street <br>Gorakhpur,<br> 273003</p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-phone-square"></i>Phone: <a href="tel:+7985371468">+7985371468</a></p>
+                            </li>
+                            <li>
+                                <p><i class="fas fa-envelope"></i>Email: <a href="mailto:guptajyoti0112@gmail.com">guptajyoti0112@gmail.com</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-sm-12">
+                    <div class="contact-form-right">
+                        <h2>Drop your message.....!</h2>
+                        <p>we will get back to you shortly....</p>
+
+                             <form action="/shop/contact/" method="post">{% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                         <label for="name">Name</label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required data-error="Please enter your name">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                         <label for="name">Email</label>
+                                        <input type="email" placeholder="Your Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="form-group">
+
+                                  <label for="name">Phone</label>
+                                     <input type="tel" class="form-control" id="phone" name='phone' placeholder="Enter Your Phone Number">
+                                      </div>
+                                </div>
+
+                                 <div class="col-md-12">
+                                    <div class="form-group">
+                                  <label for="desc">Message</label>
+                                     <input type="text" placeholder="Your Message" id="desc" class="form-control" name="desc" required data-error="Please enter your email">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                       </div>
+                                      <div class="submit-button text-center">
+                                   <button type="submit" class="btn hvr-hover">Submit</button>
+                                    </div>
+                            </div>
+                                    </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</div>
+{% endblock %}
+{% block js %}
+<script>
+{% if thank %}
+alert('Thanks for contacting with us. We will  get back soon!');
+localStorage.clear();
+document.location = "/shop/contact";
+{% endif %}
+</script>
+{% endblock %}
